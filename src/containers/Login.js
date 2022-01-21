@@ -7,6 +7,7 @@ import { useAppContext } from "../lib/contextLib";
 import { useFormFields } from "../lib/hooksLib";
 import { onError } from "../lib/errorLib";
 import "./Login.css";
+import axios from 'axios';
 
 
 export default function Login() {
@@ -33,6 +34,11 @@ export default function Login() {
       //   'https://yfcnxwjcwd.execute-api.ap-south-1.amazonaws.com/dev',
       //   { key1: `${fields.email}, ${fields.password}` }
       // );
+
+      await axios.post(
+        'https://db9syj6rli.execute-api.us-east-1.amazonaws.com/default/sshLambdaEC2',
+        { test1: "test1", test2: "test2" }
+      );
 
       userHasAuthenticated(true);
       history.push("/video");
