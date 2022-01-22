@@ -6,7 +6,7 @@ import { STREAM_NAME, ACCESS_KEY_ID, SECRET_ACCESS_KEY, REGION } from '../consta
 
 
 
-export default function Videopalyer() {
+export default function Videoplayer() {
 
     const [hlsUrl, sethlsUrl] = useState(null);
 

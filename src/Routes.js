@@ -4,7 +4,8 @@ import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login";
 import Signup from "./containers/Signup";
-import Videopalyer from "./containers/VideoPlayer";
+import Videoplayer from "./containers/VideoPlayer";
+import ShakaVideoplayer from "./containers/Shakaplayer";
 import Sample from "./containers/sample";
 
 export default function Routes() {
@@ -20,7 +21,10 @@ export default function Routes() {
         <Signup />
       </Route>
       <Route exact path="/video">
-        <Videopalyer />
+        <Videoplayer />
+      </Route>
+      <Route exact path="/Shaka">
+        <ShakaVideoplayer />
       </Route>
       <Route exact path="/sample">
         <Sample />

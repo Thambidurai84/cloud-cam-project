@@ -35,10 +35,21 @@ export default function Login() {
       //   { key1: `${fields.email}, ${fields.password}` }
       // );
 
-      await axios.post(
-        'https://db9syj6rli.execute-api.us-east-1.amazonaws.com/default/sshLambdaEC2',
-        { test1: "test1", test2: "test2" }
-      );
+      // await axios.post(
+      //   'https://db9syj6rli.execute-api.us-east-1.amazonaws.com/default/sshLambdaEC2',
+      //   { test1: "test1", test2: "test2" }
+      // );
+
+      axios.post('https://db9syj6rli.execute-api.us-east-1.amazonaws.com/default/sshLambdaEC2', {
+        username: fields.email,
+        password: fields.password
+      })
+        .then(function (response) {
+          console.log("response");
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
 
       userHasAuthenticated(true);
       history.push("/video");
